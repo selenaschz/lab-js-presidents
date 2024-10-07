@@ -465,10 +465,7 @@ function getPresidentsBornAfter(presidentsArr, year) {
 
 // Bonus: Iteration 7 | Count Republican Presidents
 function countRepublicanPresidents(presidentsArr) {
-  return presidentsArr.reduce((acc, president) =>{
-    const republicanArr = presidentsArr.filter((president) => president.party === "Republican");
-    return acc = republicanArr.length;
-  }, 0);
+  return presidentsArr.reduce((acc, president) => president.party === "Republican" ? acc +=1 : acc, 0);
 }
 
 
